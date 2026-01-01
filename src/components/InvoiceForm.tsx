@@ -4,10 +4,12 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 
+
 interface InvoiceItem {
   description: string
   quantity: number
   rate: number
+  
 }
 
 interface InvoiceData {
