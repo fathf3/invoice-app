@@ -221,9 +221,7 @@ export default function Home() {
       conditions: '',
       tax: 0,
       discount: 0,
-      shipping: 0,
-      shippingLabel: 'Shipping',
-      shippingEnabled: false,
+     
       taxLabel: t.tax,
       extraSections: [],
       currency: 'USD',
