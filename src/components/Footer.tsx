@@ -1,4 +1,4 @@
-import { Console } from "console"
+
 
 
 interface FooterProps {
