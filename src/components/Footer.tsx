@@ -28,7 +28,7 @@ const translations = {
   },
 }
 
-export default function FooterPage({ language, themeMode, onStartClick  }: FooterProps) {
+export default function FooterPage({ language, themeMode  }: FooterProps) {
   const t = translations[language]
   
   const year = new Date().getFullYear()
