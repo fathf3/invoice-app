@@ -32,9 +32,7 @@ interface InvoiceData {
   tax: number
   taxLabel?: string
   discount: number
-  shipping: number
-  shippingLabel?: string
-  shippingEnabled?: boolean
+
   extraSections?: { label: string; amount: number }[]
   currency: string
   theme: string
@@ -180,9 +178,7 @@ function HomeContent() {
     conditions: '',
     tax: 0,
     discount: 0,
-    shipping: 0,
-    shippingLabel: 'Shipping',
-    shippingEnabled: false,
+  
     taxLabel: t.tax,
     extraSections: [],
     currency: 'TRY',
@@ -227,9 +223,7 @@ function HomeContent() {
       conditions: '',
       tax: 0,
       discount: 0,
-      shipping: 0,
-      shippingLabel: 'Shipping',
-      shippingEnabled: false,
+    
       taxLabel: t.tax,
       extraSections: [],
       currency: 'USD',

@@ -15,7 +15,7 @@ const translations = {
     feature2Title: '🎨 Özelleştirilebilir Tasarım',
     feature2Desc: 'Şirket logonuz ve renklarınızla kişiselleştirin',
     feature3Title: '💾 Geçmiş Kaydı',
-    feature3Desc: 'Oluşturduğunuz tüm faturaları saklayın ve tekrar kullanın',
+    feature3Desc: 'Oluşturduğunuz tüm faturaları saklayın ve tekrar kullnın',
     feature4Title: '📄 PDF İndir',
     feature4Desc: 'Faturalarınızı PDF olarak indirin ve yazdırın',
     feature5Title: '🌍 Çok Dil Desteği',
