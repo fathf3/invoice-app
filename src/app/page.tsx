@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import InvoiceForm from '@/components/InvoiceForm'
 import InvoicePreview from '@/components/InvoicePreview'
@@ -32,6 +32,9 @@ interface InvoiceData {
   tax: number
   taxLabel?: string
   discount: number
+  shipping: number
+  shippingLabel?: string
+  shippingEnabled?: boolean
   extraSections?: { label: string; amount: number }[]
   currency: string
   theme: string
@@ -147,7 +150,7 @@ const translations = {
   },
 }
 
-export default function Home() {
+function HomeContent() {
   const searchParams = useSearchParams()
   const initialLang = searchParams?.get('lang') === 'en' ? 'en' : 'tr'
   const showApp = searchParams?.get('showApp') === 'true'
@@ -177,6 +180,9 @@ export default function Home() {
     conditions: '',
     tax: 0,
     discount: 0,
+    shipping: 0,
+    shippingLabel: 'Shipping',
+    shippingEnabled: false,
     taxLabel: t.tax,
     extraSections: [],
     currency: 'TRY',
@@ -221,7 +227,9 @@ export default function Home() {
       conditions: '',
       tax: 0,
       discount: 0,
-     
+      shipping: 0,
+      shippingLabel: 'Shipping',
+      shippingEnabled: false,
       taxLabel: t.tax,
       extraSections: [],
       currency: 'USD',
@@ -376,5 +384,13 @@ export default function Home() {
         </>
       )}
     </div>
+  )
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   )
 }
