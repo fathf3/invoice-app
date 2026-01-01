@@ -143,7 +143,7 @@ const translations = {
 }
 
 const currencies = ['TRY', 'EUR', 'USD', 'GBP', 'JPY']
-const themes = ['Classic', 'Modern', 'Minimal', 'Corporate']
+
 
 export default function InvoiceForm({
   invoice,
