@@ -1,9 +1,9 @@
 'use client'
 
-import { useRef } from 'react'
-import Image from 'next/image'
-import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
+import jsPDF from 'jspdf'
+import Image from 'next/image'
+import { useRef } from 'react'
 
 interface InvoiceItem {
   description: string
@@ -146,8 +146,7 @@ export default function InvoicePreview({
   }
 
   const bgClass = themeMode === 'dark' ? 'bg-gray-900' : 'bg-white'
-  const textClass = themeMode === 'dark' ? 'text-gray-900' : ''
-  const darkBgClass = themeMode === 'dark' ? 'dark:bg-gray-100' : ''
+
 
   return (
     <div className={`${bgClass} rounded-lg shadow`}>
