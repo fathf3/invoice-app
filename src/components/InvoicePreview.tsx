@@ -31,9 +31,7 @@ interface InvoiceData {
   tax: number
   taxLabel?: string
   discount: number
-  shipping: number
-  shippingLabel?: string
-  shippingEnabled?: boolean
+  
   extraSections?: { label: string; amount: number }[]
   currency: string
   theme: string

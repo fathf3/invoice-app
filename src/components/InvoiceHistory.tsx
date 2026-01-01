@@ -25,7 +25,7 @@ interface InvoiceData {
   conditions: string
   tax: number
   discount: number
-  shipping: number
+  
   currency: string
   theme: string
 }
@@ -82,7 +82,7 @@ export default function InvoiceHistory({
     const discountAmount = (subtotal * invoice.discount) / 100
     const taxableAmount = subtotal - discountAmount
     const taxAmount = (taxableAmount * invoice.tax) / 100
-    return taxableAmount + taxAmount + invoice.shipping
+    return taxableAmount + taxAmount 
   }
 
   const bgClass = themeMode === 'dark' ? 'dark:bg-gray-800' : ''

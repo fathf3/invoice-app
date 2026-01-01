@@ -30,9 +30,8 @@ interface InvoiceData {
   tax: number
   taxLabel?: string
   discount: number
-  shipping: number
-  shippingLabel?: string
-  shippingEnabled?: boolean
+  
+ 
   extraSections?: { label: string; amount: number }[]
   currency: string
   theme: string
@@ -204,9 +203,7 @@ export default function InvoiceForm({
         theme: invoice.theme,
         tax: invoice.tax,
         taxLabel: invoice.taxLabel,
-        shipping: invoice.shipping,
-        shippingLabel: invoice.shippingLabel,
-        shippingEnabled: invoice.shippingEnabled,
+       
         discount: invoice.discount,
         extraSections: invoice.extraSections || [],
       }
