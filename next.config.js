@@ -65,7 +65,7 @@ const nextConfig = {
         ],
       },
       {
-        source: '/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2))',
+        source: '/:path*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2)',
         headers: [
           {
             key: 'Cache-Control',
